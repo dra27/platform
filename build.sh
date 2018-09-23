@@ -131,6 +131,6 @@ else
   ./boot.exe --release || (rm -f boot.exe && $MAKE)
 fi
 cd ../..
-./bootstrap/dune/_build/install/default/bin/dune build --profile=release --debug-dependency-path @cli
+./bootstrap/dune/_build/install/default/bin/dune build --profile=release --debug-dependency-path --debug-backtraces @cli
 cp bootstrap/dune/_build/install/default/bin/dune _build/default/output/
 cp bootstrap/dune/_build/install/default/bin/jbuilder _build/default/output/

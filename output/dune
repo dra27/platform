@@ -1,14 +1,18 @@
 (rule (copy ../ocaml_modules/opam-core/src/client/opamMain.exe opam))
 (rule (copy ../ocaml_modules/opam-core/src/tools/opam_installer.exe opam-installer))
-(rule (copy ../ocaml_modules/bun/src/bun.exe bun))
+; (rule (copy ../ocaml_modules/bun/src/bun.exe bun))
 (rule (copy ../ocaml_modules/craml/bin/main.exe craml))
 (rule (copy ../ocaml_modules/dune-release/bin/main.exe dune-release))
 (rule (copy ../ocaml_modules/merlin/src/frontend/ocamlmerlin.exe ocamlmerlin))
 (rule (copy ../ocaml_modules/merlin/src/frontend/ocamlmerlin_server.exe ocamlmerlin-server))
 (rule (copy ../ocaml_modules/odoc/src/odoc/bin/main.exe odoc))
-(rule (copy ../ocaml_modules/utop/src/top/utop.bc utop))
+; (rule (copy ../ocaml_modules/utop/src/top/utop.bc utop))
 (rule (copy ../ocaml_modules/ocamlformat/src/ocamlformat.exe ocamlformat))
 
 (alias
  (name cli)
- (deps opam opam-installer bun craml dune-release ocamlmerlin ocamlmerlin-server odoc utop ocamlformat))
+ (deps opam opam-installer
+      ; bun
+       craml dune-release ocamlmerlin ocamlmerlin-server odoc
+      ; utop
+       ocamlformat))
